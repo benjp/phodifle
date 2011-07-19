@@ -1,0 +1,57 @@
+<project>  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.phodifle</groupId>
+  <artifactId>phodifle.analyzer</artifactId>
+  <packaging>jar</packaging>
+  <name>Analyzer and Phonem Graphics Generator</name>
+  <version>trunk</version>
+  <url>http://paillereau.com/blog/</url>
+  <description>Analyzer and Phonem Graphics Generator</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.ibm.icu</groupId>
+      <artifactId>icu4j</artifactId>
+      <version>3.8.1</version>
+    </dependency>  
+  </dependencies>
+  
+  <build>
+    <resources>
+        <resource>
+          <directory>src/main/java</directory>
+        </resource>
+		<resource>
+			<directory>src/main/resources</directory>
+			<includes>
+				<include>**/*.properties</include>
+				<include>**/*.xml</include>
+				<include>**/*.drl</include>
+				<include>**/*.doc</include>
+				<include>**/*.xls</include>
+				<include>**/*.ppt</include>
+				<include>**/*.txt</include>
+				<include>**/*.jar</include>
+				<include>**/*.pom</include>
+				<include>**/*.sha1</include>
+				<include>**/*.conf</include>
+				<include>**/*.gtmpl</include>
+				<include>**/*.gif</include>
+				<include>**/*.jpg</include>
+				<include>**/*.png</include>
+			</includes>
+		</resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration> 
+        	<source>1.5</source>
+        	<target>1.5</target>
+        	<optimize>true</optimize>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
